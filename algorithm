@@ -1,0 +1,17 @@
+## ⚙️ Execution Flow (Algorithm)
+
+The system follows a structured execution pipeline to ensure reliability, risk control, and fault tolerance:
+
+1. Strategy generates BUY/SELL signal based on market data  
+2. Mode check:  
+   - MOCK → store in DB (simulation)  
+   - LIVE → proceed to execution  
+3. Order is created and managed by OMS  
+4. Risk engine validates (limits, slicing, trade checks)  
+5. Broker selected using round-robin (failover supported)  
+6. Order sent to broker API for execution  
+7. Order status tracked and stored (placed/filled/rejected)  
+8. Alerts triggered on failures or connection issues  
+9. (Phase 2) Reconciliation with broker contract notes  
+
+🔗 Detailed Algorithm: https://www.notion.so/Algorithm-1-2db495f7ccc980bfa9d3d2ef2991a543
