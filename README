@@ -1,0 +1,11 @@
+# 🚀 Online Quant Execution System
+
+A scalable, event-driven trading system for **multi-asset derivatives (Equity, Index, MCX F&O)** designed for low-latency execution, risk control, and multi-broker routing.
+
+The system follows a modular pipeline: **Strategy → Kafka → OMS → Risk Engine → Execution → Broker APIs**, with support for **MOCK vs LIVE trading** for safe testing. It includes features like order lifecycle management, order slicing, trade range checks, and round-robin broker failover to ensure reliability.
+
+Built using **Python, Apache Kafka, PostgreSQL, Redis, and TimescaleDB**, the system ensures strong consistency for transactions, real-time performance, and efficient historical data handling for backtesting and analytics.
+
+It is designed to scale from a few strategies to 30+ strategies, with planned extensions including **contract note reconciliation, backtesting engine, and co-location deployment for latency optimization**.
+
+🔗 Project Link: https://www.notion.so/Online-Quant-Execution-System-2be495f7ccc9807e98f4d3809b1d5dc7
